@@ -25,7 +25,8 @@
         self.scrollView.showsVerticalScrollIndicator = NO;
         self.scrollView.bounces = NO;
         UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"apple.jpg"]];
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
+        imageView.frame = self.view.bounds;
+        imageView.contentMode = UIViewContentModeScaleAspectFill;
         self.scrollView.contentSize = imageView.image.size;
         [self.scrollView addSubview:imageView];
     }
